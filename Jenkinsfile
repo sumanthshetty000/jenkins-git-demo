@@ -2,11 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('From GitHub') {
+        stage('Docker Test') {
             steps {
-                echo 'Pipeline running from GitHub 🎉'
-                sh 'date'
-                sh 'whoami'
+                sh 'docker version'
+                sh 'docker ps'
             }
         }
     }
